@@ -5,7 +5,6 @@ $amount = trim(fgets(STDIN));
 echo "Enter category: ";
 $category = trim(fgets(STDIN));
 
-// Append to incomes.txt or expenses.txt respectively
 $file = 'data/' . (basename(__FILE__) === 'add_income.php' ? 'incomes.txt' : 'expenses.txt');
 $data = "$amount,$category\n";
 file_put_contents($file, $data, FILE_APPEND);
